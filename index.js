@@ -1,6 +1,6 @@
 const React = require('react');
-const { Component } = React;
-const { ViewPropTypes } = ReactNative = require('react-native');
+const { Component, } = React;
+const { ViewPropTypes, } = ReactNative = require('react-native');
 const createReactClass = require('create-react-class');
 const PropTypes = require('prop-types');
 const {
@@ -13,7 +13,7 @@ const {
   InteractionManager,
 } = ReactNative;
 const TimerMixin = require('react-timer-mixin');
-const NestedScrollView from require('react-native-nested-scrollview');
+const NestedScrollView = require('react-native-nested-scrollview');
 const SceneComponent = require('./SceneComponent');
 const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
