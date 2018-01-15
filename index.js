@@ -7,14 +7,13 @@ const {
   Dimensions,
   View,
   Animated,
-  ScrollView,
   Platform,
   StyleSheet,
   ViewPagerAndroid,
   InteractionManager,
 } = ReactNative;
 const TimerMixin = require('react-timer-mixin');
-
+const NestedScrollView from require('react-native-nested-scrollview');
 const SceneComponent = require('./SceneComponent');
 const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
@@ -130,7 +129,7 @@ const ScrollableTabView = createReactClass({
 
   renderScrollableContent() {
     const scenes = this._composeScenes();
-    return <ScrollView
+    return <NestedScrollView
       horizontal
       pagingEnabled
       automaticallyAdjustContentInsets={false}
@@ -152,7 +151,7 @@ const ScrollableTabView = createReactClass({
       {...this.props.contentProps}
     >
       {scenes}
-    </ScrollView>;
+    </NestedScrollView>;
   },
 
   _composeScenes() {

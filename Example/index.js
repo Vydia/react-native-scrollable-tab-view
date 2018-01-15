@@ -3,9 +3,9 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import NestedScrollView from 'react-native-nested-scrollview';
 import createReactClass from 'create-react-class';
 import { StackNavigator } from 'react-navigation';
 import SimpleExample from './SimpleExample';

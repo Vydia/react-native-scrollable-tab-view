@@ -6,13 +6,12 @@ const {
   View,
   Animated,
   StyleSheet,
-  ScrollView,
   Text,
   Platform,
   Dimensions,
 } = ReactNative;
 const Button = require('./Button');
-
+const NestedScrollView require('react-native-nested-scrollview');
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
 const ScrollableTabBar = createReactClass({
@@ -168,7 +167,7 @@ const ScrollableTabBar = createReactClass({
       style={[styles.container, {backgroundColor: this.props.backgroundColor, }, this.props.style, ]}
       onLayout={this.onContainerLayout}
     >
-      <ScrollView
+      <NestedScrollView
         ref={(scrollView) => { this._scrollView = scrollView; }}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
@@ -189,7 +188,7 @@ const ScrollableTabBar = createReactClass({
           })}
           <Animated.View style={[tabUnderlineStyle, dynamicTabUnderline, this.props.underlineStyle, ]} />
         </View>
-      </ScrollView>
+      </NestedScrollView>
     </View>;
   },
 
