@@ -31,6 +31,7 @@
   "dependencies": {
     "create-react-class": "^15.6.2",
     "prop-types": "^15.6.0",
+    "react-native-nested-scroll-view": "^6.0.1",
     "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
